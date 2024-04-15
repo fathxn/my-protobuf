@@ -7,11 +7,17 @@ import (
 )
 
 func BasicUser() {
+	addr := basic.Address{
+		Street:  "Mangunsari",
+		City:    "Grobogan",
+		Country: "Indonesia",
+	}
 	u := basic.User{
 		Id:       99,
 		Username: "Marley",
 		IsActive: true,
 		Password: []byte("namasayamarley"),
+		Address:  &addr,
 		//Emails:   []string{"marley@mail.com", "bob@mail.com"},
 		//Gender:   basic.Gender_GENDER_MALE,
 	}
